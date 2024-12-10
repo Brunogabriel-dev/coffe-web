@@ -66,4 +66,22 @@ header nav{
   content: '';
   background-color: red;
   top: 0;
+  left: calc(100% - calc(var(--w-image) * var(--calculate)));
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  z-index: 10;
+  pointer-events: none;
+}
+.carousel .list::after{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  content: '';
+  background-color: red;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 20px 50px 110px 230px;
+  filter: blur(150px);
 }
