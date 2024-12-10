@@ -49,3 +49,21 @@ header nav ul{
 header nav{
   border-left: 1px solid var(--border-color);
 }
+.carousel{
+  margin-top: -80px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel .list{
+  height: 100%;
+  position: relative;
+}
+.carousel .list::before{
+  position: absolute;
+  width: var(--w-image);
+  height: 100%;
+  content: '';
+  background-color: red;
+  top: 0;
+}
