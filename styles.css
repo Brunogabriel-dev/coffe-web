@@ -158,4 +158,33 @@ header nav{
 .arrows button{
   background-color: transparent;
   border: 1px solid var(--border-color);
+  color: #fff;
+  font-family: monospace;
+  font-size: larger;
+  font-weight: bold;
+  line-height: 0;
+  box-shadow: 0 10px 40px #5555;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.arrows button:hover{
+  background-color: #eee5;
+}
+.carousel .list .item{
+  display: none;
+}
+.carousel .list .item.active,
+.carousel .list .item.other_1,
+.carousel .list .item.other_2{
+  display: block;
+}
+.carousel .list .item.active{
+  z-index: 2;
+}
+.carousel .list .item.other_1,
+.carousel .list .item .item.other_2{
+  pointer-events: none;
+}
+.carousel .list .item.active .main-content{
+  animation: showContent 1s ease-in-out 1 forwards;
 }
