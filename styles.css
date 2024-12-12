@@ -192,7 +192,7 @@ header nav{
   from{
     clip-path: circle(0% at 70% 50%);
   }to{
-    clip-path: circle(50% at 70% 50%);
+    clip-path: circle(100% at 70% 50%);
   }
 }
 .next .item.other_1{
@@ -211,4 +211,9 @@ header nav{
 }
 .next .item.active .image{
   --transform-from: var(--w-image);
+}
+.next .item.other_1 .image{
+  z-index: 3;
+  --transform-from: 0px;
+  overflow: hidden;
 }
