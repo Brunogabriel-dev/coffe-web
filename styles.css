@@ -188,3 +188,17 @@ header nav{
 .carousel .list .item.active .main-content{
   animation: showContent 1s ease-in-out 1 forwards;
 }
+@keyframes showContent{
+  from{
+    clip-path: circle(0% at 70% 50%);
+  }to{
+    clip-path: circle(50% at 70% 50%);
+  }
+}
+.next .item.other_1{
+  z-index: 1;
+}
+.next .item .image img,
+.next .item .image figcaption{
+  animation: effectNext .5s;
+}
