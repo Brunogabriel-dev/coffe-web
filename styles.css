@@ -200,5 +200,15 @@ header nav{
 }
 .next .item .image img,
 .next .item .image figcaption{
-  animation: effectNext .5s;
+  animation: effectNext .5s ease-in-out 1 forwards;
+}
+@keyframes effectNext{
+  from{
+    transform: translateX(calc(var(--transform-from)));
+  }to{
+    transform: translateX(calc(var(--transform-from) -var(--w-image)));
+  }
+}
+.next .item.active .image{
+  --transform-from: var(--w-image);
 }
