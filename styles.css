@@ -221,3 +221,6 @@ header nav{
   z-index: 3;
   --transform-from: calc(var(--w-image) * 2);
 }
+.arrows{
+  z-index: 10;
+}
