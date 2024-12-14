@@ -217,3 +217,7 @@ header nav{
   --transform-from: 0px;
   overflow: hidden;
 }
+.next .item.other_2 .image{
+  z-index: 3;
+  --transform-from: calc(var(--w-image) * 2);
+}
