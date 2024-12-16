@@ -10,4 +10,5 @@ next.onclick = () => {
   active =active + 1 >= countItem ? 0 : active + 1;
   other_1 =active - 1 < 0 ? countItem -1 : active - 1;
   other_2 =active + 1 >= countItem ? 0 : active + 1;
+  changeSlider();
 }
