@@ -7,11 +7,21 @@ let active = 1;
 let other_1 = null;
 let other_2 = null;
 next.onclick = () => {
-  active = active + 1 >= countItem ? 0 : active + 1;
-  other_1 = active - 1 < 0 ? countItem -1 : active - 1;
+  carousel.classList.remove('prev');
+  carousel.classList.add('next');
+  active =active + 1 >= countItem ? 0 : active + 1;
+  other_1 =active - 1 < 0 ? countItem -1 : active - 1;
   other_2 = active + 1 >= countItem ? 0 : active + 1;
   changeSlider();
 }
+prev.onclick = () => {
+  carousel.classList.remove('next');
+  carousel.classList.add('prev');
+  active = active - 1 < 0 ? countItem - 1 : active - 1;
+  other_1 = active + 1 >= countItem ? 0 : active + 1
+  other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
+}
+
 const changeSlider = () => {
   let itemOldActive = document.querySelector('.carousel .item .active');
   if(itemOldActive) itemOldActive.classList.remove('active');
@@ -24,7 +34,10 @@ const changeSlider = () => {
 
   items.forEach(e => {
     e.querySelector('.image img').style.animation = 'none';
-    e.querySelector('.image img').style.animation = 'none';
+    e.querySelector('.image figcaption').style.animation = 'none';
+    void e.offsetWidth;
+    e.querySelector('.image img').style.animation = '';
+    e.querySelector('.image figcaption').style.animation = '';
   })
 
   items[active].classList.add('active');
