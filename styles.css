@@ -251,3 +251,12 @@ header nav{
 .prev .list .item.other_2 .main-content{
   opacity: 0;
 }
+@media screen and (max-width: 1023px){
+  :root{
+    --calculate: 1;
+    --w-image: 400px;
+  }
+  .carousel .list .item .main-content .content h2{
+    font-size: 3em;
+  }
+}
