@@ -206,7 +206,7 @@ header nav{
   from{
     transform: translateX(calc(var(--transform-from)));
   }to{
-    transform: translateX(calc(var(--transform-from) -var(--w-image)));
+    transform: translateX(calc(var(--transform-from) - var(--w-image)));
   }
 }
 .next .item.active .image{
