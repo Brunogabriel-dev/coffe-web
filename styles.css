@@ -236,3 +236,18 @@ header nav{
     transform: translateX(calc(var(--transform-from)));
   }
 }
+.prev .list .item.active .image{
+  --transform-from: calc(var(--w-image) * -1);
+  overflow: hidden;
+}
+.prev .list .item.other_1 .image{
+  --transform-from: 0px;
+  z-index: 3;
+}
+.prev .list .item.other_2 .image{
+  z-index: 3;
+  --transform-form: var(--w-image);
+}
+.prev .list .item.other_2 .main-content{
+  opacity: 0;
+}
