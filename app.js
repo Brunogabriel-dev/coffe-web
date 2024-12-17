@@ -1,7 +1,7 @@
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');
-let items = document.querySelectorAll('.carousel .items');
+let items = document.querySelectorAll('.carousel .item');
 let countItem = items.length;
 let active = 1;
 let other_1 = null;
@@ -18,12 +18,12 @@ prev.onclick = () => {
   carousel.classList.remove('next');
   carousel.classList.add('prev');
   active = active - 1 < 0 ? countItem - 1 : active - 1;
-  other_1 = active + 1 >= countItem ? 0 : active + 1
+  other_1 = active + 1 >= countItem ? 0 : active + 1;
   other_2 = other_1 + 1 >= countItem ? 0 : other_1 + 1;
   changeSlider();
 }
 const changeSlider = () => {
-  let itemOldActive = document.querySelector('.carousel .item .active');
+  let itemOldActive = document.querySelector('.carousel .item.active');
   if(itemOldActive) itemOldActive.classList.remove('active');
 
   let itemOldOther_1 = document.querySelector('.carousel .item.other_1');
