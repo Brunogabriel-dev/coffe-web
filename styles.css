@@ -80,7 +80,7 @@ header nav{
   height: 300px;
   z-index: 10;
   pointer-events: none;
-  border-radius: 20px 50px 110px 230px;
+  border-radius: 20px  50px 110px  230px;
   filter: blur(150px);
   opacity: .6;
 }
@@ -123,7 +123,7 @@ header nav{
   grid-template-columns: calc(100% - calc(var(--w-image) * var(--calculate)));
 }
 .carousel .list .item .main-content .content{
-  padding: 150px 20px 20px 80px;
+  padding: 150px 20px  20px 80px;
 }
 .carousel .list .item .main-content .content h2{
   font-size: 5em;
@@ -137,7 +137,7 @@ header nav{
 .carousel .list .item .main-content .content .addToCard{
   background-color: #4f8b69;
   color: #fff;
-  padding: 10px 30px;
+  padding: 10px  30px;
   font-family: Poppins;
   font-size: large;
   font-weight: 500;
@@ -190,9 +190,9 @@ header nav{
 }
 @keyframes showContent{
   from{
-    clip-path: circle(0% at 70% 50%);
+      clip-path: circle(0% at 70% 50%);
   }to{
-    clip-path: circle(100% at 70% 50%);
+      clip-path: circle(100% at 70% 50%);
   }
 }
 .next .item.other_1{
@@ -204,9 +204,9 @@ header nav{
 }
 @keyframes effectNext{
   from{
-    transform: translateX(calc(var(--transform-from)));
+      transform: translateX(calc(var(--transform-from)));
   }to{
-    transform: translateX(calc(var(--transform-from) - var(--w-image)));
+      transform: translateX(calc(var(--transform-from) - var(--w-image)));
   }
 }
 .next .item.active .image{
@@ -231,9 +231,9 @@ header nav{
 }
 @keyframes effectPrev{
   from{
-    transform: translateX(calc(var(--transform-from)));
+      transform: translateX(calc(var(--transform-from)));
   }to{
-    transform: translateX(calc(var(--transform-from) + var(--w-image)));
+      transform: translateX(calc(var(--transform-from) + var(--w-image)));
   }
 }
 .prev .list .item.active .image{
@@ -246,36 +246,36 @@ header nav{
 }
 .prev .list .item.other_2 .image{
   z-index: 3;
-  --transform-form: var(--w-image);
+  --transform-from: var(--w-image);
 }
 .prev .list .item.other_2 .main-content{
   opacity: 0;
 }
 @media screen and (max-width: 1023px){
   :root{
-    --calculate: 1;
-    --w-image: 400px;
+      --calculate: 1;
+      --w-image: 400px; 
   }
   .carousel .list .item .main-content .content h2{
-    font-size: 3em;
+      font-size: 3em;
   }
 }
 @media screen and (max-width: 767px){
   .carousel .list .item .image{
-    width: 100%;
-    left: 0;
-    justify-content: center;
+      width: 100%;
+      left: 0;
+      justify-content: center;
   }
   .carousel .list .item .image figcaption{
-    color: #fff;
-    width: 100%;
-    text-align: center;
+      color: #fff;
+      width: 100%;
+      text-align: center;
   }
   .carousel .list .item .main-content .content{
-    display: none;
+      display: none;
   }
   .arrows{
-    left: 50%;
-    justify-content: center;
+      left: 50%;
+      justify-content: center;
   }
 }
